@@ -1,3 +1,74 @@
-form#newGame {
+#title {
+  margin-top: 0;
+  color: gold;
+  background-color: brown;
+  padding: 3vh;
+}
+
+#title h1 {
+  font-size: 4em;
+
+}
+
+#newGame {
+ display: table;
+ vertical-align: middle;
+}
+
+#newGame form {
+  /*margin: 0;*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /*margin-right: -50%;*/
+  transform: translate(-50%, -50%);
+}
+
+#gamePlay {
   display: none;
+}
+
+#gamePlay .dice {
+  border: solid black;
+  height: 20vh;
+  width: 20vh;
+}
+
+
+#roll, #hold {
+  bottom: 10px;
+  position: absolute;
+}
+
+#roll {
+  left: 20%;
+}
+
+#hold {
+  left: 55%;
+}
+
+.currentTurn {
+  float:right;
+}
+
+.roll {
+  font-size: 100px;
+}
+#congrats {
+ /*display: table;*/
+ vertical-align: middle;
+ display: none;
+  /*margin: 0;*/
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  /*margin-right: -50%;*/
+  transform: translate(-50%, -50%);
+  color: hotpink;
+}
+
+#continue {
+  margin-left: 50%;
+  margin-top: 1vh;
 }

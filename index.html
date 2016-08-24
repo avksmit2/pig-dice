@@ -9,8 +9,11 @@
     <title>Pig Dice</title>
   </head>
   <body>
-    <div class="container">
-      <form id="newGame">
+    <div id="title">
+      <h1 class="text-center">Pig Dice</h1>
+    </div>
+    <div id="newGame" class="container container-table">
+      <form class="block-center">
         <h1>Start new game:</h1>
         <div class="form-group">
           <label for="player1">Player 1 name:</label>
@@ -20,17 +23,42 @@
           <label for="player2">Player 2 name:</label>
           <input type="text" class="form-control" id="player2">
         </div>
-        <button id="startGame" type="submit" class="btn btn-info">Start Game</button>
+        <div class="form-group">
+          <label for="winNum">Decide winning score:</label>
+          <input type="number" class="form-control" id="winNum" min=1>
+        </div>
+        <button id="startGame" type="submit" class="btn btn-info btn-lg">Start Game</button>
       </form>
-      <div class="container" id="gamePlay">
-        <button id="roll" type="button" class="btn btn-warning">Roll</button>
-        <button id="hold" type="button" class="btn btn-danger">Hold</button>
-        <h1 class="activePlayer"></h1>
-        <h1 class="roll"></h1>
-        <h1 class="turnTotal"></h1>
-        <h1><span class="player1Name"></span><span class="player1Score"></span></h1>
-        <h1><span class="player2Name"></span><span class="player2Score"></span></h1>
+    </div>
+    <div class="container" id="gamePlay">
+      <div class="jumbotron row">
+        <div class="col-sm-7">
+          <h1>Game #: <span class="gameNum"></span></h1>
+        </div>
+        <div class="col-sm-5">
+          <h2><span class="player1Name"></span><span class="player1Score"></span></h2>
+          <h2><span class="player2Name"></span><span class="player2Score"></span></h2>
+        </div>
       </div>
+      <div class="row">
+        <div class="col-sm-3 dice">
+          <h4 class="text-center">and the roll is: </h4>
+          <h1 class="text-center roll"></h1>
+          <div class="buttons">
+            <button id="roll" type="button" class="btn btn-warning">Roll</button>
+            <button id="hold" type="button" class="btn btn-danger">Hold</button>
+          </div>
+        </div>
+        <div class="col-sm-7 currentTurn">
+          <h1 class="activePlayer"></h1>
+          <h1 class="turnTotal"></h1>
+        </div>
+      </div>
+    </div>
+    <div class="container container-table" id="congrats">
+      <img src="img/primePig.jpg" alt="Prime Pig Pic">
+      <h1 class="text-center"><span class="winner"></span></h1>
+      <button id="continue" type="button" class="btn btn-info btn-lg" >Continue</button>
     </div>
   </body>
 </html>
