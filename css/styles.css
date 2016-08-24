@@ -53,15 +53,6 @@
   /*display: flex;
   flex-direction: column;*/
 }
-/*
-#flexbox {
-  display: flex;
-  flex-wrap: wrap;
-}*/
-/*
-#roll, #hold {
-  margin-top: auto;
-}*/
 
 #doh {
   display: none;
@@ -69,7 +60,10 @@
   font-size: 5vh;
   font-style: italic;
 }
-
+.diceImg {
+  height:400px;
+  
+}
 #congrats {
  /*display: table;*/
  vertical-align: middle;
