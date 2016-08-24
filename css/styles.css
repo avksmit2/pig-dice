@@ -42,33 +42,26 @@
   display: none;
 }
 
-#gamePlay .dice {
-  border: solid black;
-  height: 20vh;
-  width: 20vh;
-}
-
-
-#roll, #hold {
-  bottom: 10px;
-  position: absolute;
-}
-
-#roll {
-  left: 20%;
-}
-
-#hold {
-  left: 55%;
-}
-
-.currentTurn {
+#gamePlay .currentTurn {
   float:right;
 }
 
-.roll {
-  font-size: 100px;
+#gamePlay .dice {
+  border: solid black;
+  height: 30vh;
+  width: 30vh;
+  /*display: flex;
+  flex-direction: column;*/
 }
+/*
+#flexbox {
+  display: flex;
+  flex-wrap: wrap;
+}*/
+/*
+#roll, #hold {
+  margin-top: auto;
+}*/
 
 #doh {
   display: none;

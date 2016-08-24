@@ -56,6 +56,7 @@ var getActivePlayer = function(game) {
 //Front-end
 $(document).ready(function() {
   var game;
+  var diceImgs = ["1", "2", "3", "4", "5", "6"]
   var dom = {
     newGame: $("#newGame"),
     gamePlay: $("#gamePlay"),
@@ -73,12 +74,13 @@ $(document).ready(function() {
   };
   var rollDice = function() {
     var currentRoll = game.addRoll();
-    dom.currentRoll.text(currentRoll);
+    // dom.currentRoll.text(currentRoll);
+    dom.doh.hide();
+    dom.currentRoll.children().remove();
     if (currentRoll === 1) {
       dom.doh.show();
-    } else {
-      dom.doh.hide();
     }
+    dom.currentRoll.append("<img src='img/die_" + currentRoll + ".png' alt='image of die' class='dieImg'>");
     dom.turnTotal.text("Turn total: " + game.turnTotal);
   }
 var checkGameOver = function() {
@@ -112,15 +114,18 @@ var checkGameOver = function() {
     dom.player2Score.text(game.players[1].score);
     game.gameNum ++;
     dom.gameNum.text(game.gameNum);
+    game.winNum = winNum;
+    game.gameOver = false;
     rollDice();
   });
-  $('button#roll').click(function() {
+  $('#roll').click(function() {
     rollDice();
     dom.activePlayerName.text("Current player: " + game.activePlayer.name);
   });
   $('button#hold').click(function() {
     game.playerHold();
-    dom.currentRoll.text(0);
+    dom.currentRoll.children().remove();
+    // dom.currentRoll.text(0);
     dom.turnTotal.text("Turn Total: " + game.turnTotal);
     dom.player1Score.text(game.players[0].score);
     dom.player2Score.text(game.players[1].score);
