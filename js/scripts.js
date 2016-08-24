@@ -68,11 +68,17 @@ $(document).ready(function() {
     player2Score: $('span.player2Score'),
     gameNum: $('span.gameNum'),
     winner: $('span.winner'),
-    congrats: $('#congrats')
+    congrats: $('#congrats'),
+    doh: $('#doh')
   };
   var rollDice = function() {
     var currentRoll = game.addRoll();
     dom.currentRoll.text(currentRoll);
+    if (currentRoll === 1) {
+      dom.doh.show();
+    } else {
+      dom.doh.hide();
+    }
     dom.turnTotal.text("Turn total: " + game.turnTotal);
   }
 var checkGameOver = function() {
@@ -124,6 +130,5 @@ var checkGameOver = function() {
   $('button#continue').click(function() {
     dom.congrats.hide();
     dom.newGame.show();
-    dom.gamePlay.show();
   });
 });

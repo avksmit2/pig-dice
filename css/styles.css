@@ -1,13 +1,27 @@
+
+#smiley {
+  float: right;
+  margin-top: -3vh;
+  height: 15vh;
+  width: auto;
+}
+
+#cute {
+  float: left;
+  margin-top: -3vh;
+  height: 15vh;
+  width: auto;
+}
+
 #title {
   margin-top: 0;
   color: gold;
-  background-color: brown;
+  background-color: #804000;
   padding: 3vh;
 }
 
 #title h1 {
   font-size: 4em;
-
 }
 
 #newGame {
@@ -55,6 +69,14 @@
 .roll {
   font-size: 100px;
 }
+
+#doh {
+  display: none;
+  color: red;
+  font-size: 5vh;
+  font-style: italic;
+}
+
 #congrats {
  /*display: table;*/
  vertical-align: middle;
