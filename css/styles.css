@@ -1,4 +1,4 @@
-
+/*
 #smiley {
   float: right;
   margin-top: -3vh;
@@ -11,12 +11,12 @@
   margin-top: -3vh;
   height: 15vh;
   width: auto;
-}
+}*/
 
 #title {
   margin-top: 0;
-  color: gold;
-  background-color: #804000;
+  color: #ff99ff;
+  background-color: #9933ff;
   padding: 3vh;
 }
 
@@ -62,7 +62,7 @@
 }
 .diceImg {
   height:400px;
-  
+
 }
 #congrats {
  /*display: table;*/

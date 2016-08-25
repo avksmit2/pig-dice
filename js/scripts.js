@@ -14,7 +14,6 @@ function Game(player1, player2, winNum) {
   this.dice = [];
   this.turnTotal = 0;
   this.activePlayer = player1; //index of this.players
-  this.testing = player1;
   this.winNum = winNum;
   this.gameOver = false;
 }
